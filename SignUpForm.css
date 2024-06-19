@@ -72,6 +72,10 @@ h6 {
     src: url('fonts/Norse-Bold.otf') format('opentype');
 }
 
+:root {
+    --grey-background: #f0f0f0;
+}
+
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
@@ -81,7 +85,7 @@ body {
 }
 
 .header-area {
-    width: 30%;
+    width: 35%;
     display: flex;
     flex-direction: column;
     background-image: url(images/halie-west-25xggax4bSA-unsplash.jpg);
@@ -119,5 +123,33 @@ body {
 }
 
 .form-area {
-    width: 70%;
+    width: 65%;
+    
+    display:flex;
+    flex-direction: column;
+    
+    
+}
+.sign-up-form {
+    flex: 1;
+    display: flex;
+    display:flex;
+    background-color: var(--grey-background);
+    flex-direction: column;
+    
+    
+    
+}
+.sign-up-form .form-header, .sign-up-form .button-area {
+    flex-grow: 1;
+    
+    
+}
+
+.sign-up-form .input-area {
+    background: #fff;
+}
+
+.button-area, .form-header, .input-area {
+    padding-left: 3em;
 }
