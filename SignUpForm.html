@@ -18,11 +18,11 @@
         <div class="logo">
             <img src="images/odin-lined.png" alt="Odin Image"><span>Odin</span>
         </div>
-        <span>Photo by Halie West on Unsplash</span>
+        <span>Photo by <span class="author">Halie West</span> on <a href="">Unsplash</a></span>
 
     </div>
     <div class="form-area">
-        <form action="submit" class="sign-up-form">
+        <form id="odinForm" class="sign-up-form">
             <div class="form-header">
                 <h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. </h2>
                 <h2>Sign up now to get started.</h2>
@@ -30,11 +30,49 @@
 
             </div>
             <div class="input-area">
-                Test
+                <h2>Let's do this!</h2>
+                <div class="form-row">
+                    <div class="formfield">
+                        <label for="fname">FIRST NAME</label>
+                        <input type="text" name="fname" id="fname" required>
+                        <span class="error"></span>
+                    </div>
+                    <div class="formfield">
+                        <label for="fname">LAST NAME</label>
+                        <input type="text" name="lname" id="lname" required>
+                        <span class="error"></span>
+
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="formfield">
+                        <label for="email">EMAIL</label>
+                        <input type="email" name="email" id="email" required>
+                        <span class="error"></span>
+                    </div>
+                    <div class="formfield">
+                        <label for="phone_number">PHONE NUMBER</label>
+                        <input type="tel" id="phone_number" name="phone_number" pattern="^\(?[0-9]{3}\)?-?[0-9]{3}-?[0-9]{4}$" required>
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="formfield">
+                        <label for="passwrd">PASSWORD</label>
+                        <input type="password" id="passwrd" name="password" required>
+                        <span class="error"></span>
+                    </div>
+                    <div class="formfield">
+                        <label for="confirm">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm" name="confirm" required>
+                        
+                    </div>
+                </div>
 
             </div>
             <div class="button-area">
-
+                <button type="submit">Create Account</button>
+                <p class="login">Already have an account? <a href="">Log in</a></p>
             </div>
         </form>
 

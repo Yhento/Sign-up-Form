@@ -12,6 +12,7 @@
   */
 * {
     margin: 0;
+    
 }
 
 /*
@@ -44,6 +45,8 @@ button,
 textarea,
 select {
     font: inherit;
+    --webkit-appearance: none;
+    border: none;
 }
 
 /*
@@ -73,7 +76,8 @@ h6 {
 }
 
 :root {
-    --grey-background: #f0f0f0;
+    --grey-background: #fdfbfb;
+    --link-button-color: #596D48;
 }
 
 body {
@@ -99,7 +103,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 1em 0;
-    margin-top: 120px;
+    margin-top: 190px;
     
 }
 
@@ -122,18 +126,27 @@ body {
    color: #fff;
 }
 
+.header-area  span.author {
+    text-decoration: underline;
+}
+
+.header-area > span a {
+    color: #fff;
+}
+
 .form-area {
     width: 65%;
     
     display:flex;
     flex-direction: column;
+
     
     
 }
 .sign-up-form {
     flex: 1;
     display: flex;
-    display:flex;
+   
     background-color: var(--grey-background);
     flex-direction: column;
     
@@ -158,12 +171,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    border-bottom: 1px solid  #e5e7eb;
     
 }
 
 .form-header > h2 {
    font-size: 1.5rem;
-   width: 60%;
+   width: 80%;
    
     
 }
@@ -171,4 +185,107 @@ body {
 .form-header h2:last-child {
     margin-bottom: 2em;
     margin-top: 1em;
+}
+
+
+.input-area {
+    box-shadow: 0px 5px 5px #e5e7eb;
+    padding-bottom: 20px;
+}
+
+.input-area > h2{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 75px;
+    margin-bottom: 25px;
+}
+
+.formfield {
+    position: relative;
+}
+
+.formfield label{
+    font-size: 0.7rem;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    letter-spacing: 1.5px;
+    
+    
+
+}
+
+.formfield input {
+    border: 1px solid #e5e7eb;
+    border-radius: 3px;
+    width: 250px;
+    height: 30px;
+    outline: none;
+    padding-left: 7px;
+    vertical-align: middle;
+    
+}
+
+.formfield input:focus {
+    border-color: blue;
+    box-shadow: 5px 4px 1px #e5e7eb;
+}
+
+.formfield input:invalid:focus {
+    border-color: red;
+}
+
+.formfield input:invalid:focus + span.error::after {
+    position: absolute;
+    left: 0px;
+    bottom: -20px;
+    content: "*This field is required.";
+    font-size: 0.8rem;
+    color: red;
+}
+
+.formfield input[type=email]:invalid:focus + span.error::after {
+    position: absolute;
+    left: 0px;
+    bottom: -20px;
+    content: "*Not a valid Email.";
+    font-size: 0.8rem;
+    color: red;
+}
+
+.button-area button {
+    margin: 20px 0px;
+    padding: 10px 50px;
+    border-radius: 5px;
+    background-color: var(--link-button-color);
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 5px 4px 1px #e5e7eb;
+    cursor: pointer;
+
+
+}
+
+button:hover {
+    box-shadow: none;
+    background-color: #3b492f;
+}
+
+button:active{
+   position: relative;
+   top: 1px;
+}
+
+p.login a {
+    text-decoration: none;
+    color: var(--link-button-color);
+    font-weight: bold;
+}
+
+p.login a:hover {
+    color: #3b492f;
 }
